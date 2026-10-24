@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from '@vercel/analytics/next';
 import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { FranceschiniAnalytics } from '@colinfran/analytics'
+
 import "./globals.css";
 
 const title = "SF Police Scanner – Live San Francisco Police Calls";
@@ -58,6 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {children}
         <Analytics />
+        <FranceschiniAnalytics websiteId="web_pOSdvAMxO33VMEjA92uF" />
       </body>
     </html>
   );
